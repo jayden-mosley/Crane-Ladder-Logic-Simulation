@@ -12,6 +12,8 @@ This project simulates PLC-style ladder logic for a crane operation using Tkinte
 ✅ Stacked Layout – Ladder logic above, crane animation middle, buttons below
 
 ![Crane Ladder Logic](screenshot1.png)
+![Crane Ladder Logic](screenshot2.png)
+![Crane Ladder Logic](screenshot3.png)
 
 ## Future Improvements
 Smooth Reanimation using after()
