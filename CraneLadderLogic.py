@@ -20,11 +20,11 @@ class CraneLadderSimulator:
         self.motor_on = False
         self.latch = False  # Latching state
         
-        # Create Canvas for Ladder Logic
+        # Create canvas for ladder logic
         self.ladder_canvas = Canvas(self.root, width=400, height=200, bg="white")
         self.ladder_canvas.pack()
 
-        # Create Canvas for Crane Animation
+        # Create canvas for crane qnimation
         self.crane_canvas = Canvas(self.root, width=400, height=200, bg="lightblue")
         self.crane_canvas.pack()
 
@@ -46,29 +46,28 @@ class CraneLadderSimulator:
         self.update_crane()
 
     def update_ladder(self):
-        """ Updates the visual representation of the ladder logic."""
         self.ladder_canvas.delete("all")
 
         # Draw ladder rails
         self.ladder_canvas.create_line(50, 20, 50, 180, width=5)
         self.ladder_canvas.create_line(350, 20, 350, 180, width=5)
 
-        # Start button (Normally Open)
+        # Start button (normally open)
         start_color = "green" if self.motor_on else "white"
         self.ladder_canvas.create_rectangle(100, 30, 180, 70, outline="black", fill=start_color)
         self.ladder_canvas.create_text(140, 50, text="START", font=("Arial", 10))
 
-        # Move Left (Lower Crane)
+        # Move left (lower crane)
         left_color = "green" if self.crane_x < 150 else "white"
         self.ladder_canvas.create_rectangle(100, 80, 180, 120, outline="black", fill=left_color)
         self.ladder_canvas.create_text(140, 100, text="MOVE LEFT", font=("Arial", 10))
 
-        # Move Up
+        # Move up
         up_color = "green" if self.crane_y < 50 else "white"
         self.ladder_canvas.create_rectangle(100, 130, 180, 170, outline="black", fill=up_color)
         self.ladder_canvas.create_text(140, 150, text="MOVE UP", font=("Arial", 10))
 
-        # Emergency Stop (Normally Closed)
+        # Emergency Stop (normally closed)
         stop_color = "red" if not self.motor_on else "white"
         self.ladder_canvas.create_rectangle(250, 30, 330, 70, outline="black", fill=stop_color)
         self.ladder_canvas.create_text(290, 50, text="STOP", font=("Arial", 10))
@@ -83,14 +82,13 @@ class CraneLadderSimulator:
         self.ladder_canvas.create_line(180, 150, 350, 150, width=2)  # Move Up to rail
 
     def update_crane(self):
-        """ Updates the crane animation. """
         self.crane_canvas.delete("all")
 
-        # Crane Structure
+        # Crane structure
         self.crane_canvas.create_rectangle(50, 40, 350, 60, fill="gray")  # Overhead Beam
         self.crane_canvas.create_line(self.crane_x, 60, self.crane_x, self.crane_y, width=2)  # Cable
 
-        # Crane Hook
+        # Crane hook
         self.crane_canvas.create_oval(self.crane_x-10, self.crane_y, self.crane_x+10, self.crane_y+20, fill="black")
 
         # Object (if lowered)
