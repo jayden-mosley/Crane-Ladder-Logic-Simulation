@@ -15,6 +15,22 @@ This project simulates PLC-style ladder logic for a crane operation using Tkinte
 ![Crane Ladder Logic](screenshot2.png)
 ![Crane Ladder Logic](screenshot3.png)
 
+## Installation & Running
+1. Clone the Repo
+   
+git clone https://github.com/YOUR-USERNAME/Crane-Ladder-Logic.git
+
+cd Crane-Ladder-Logic
+
+2. Run the Simulation
+   
+Make sure you have Python installed, then run:
+
+python crane_simulator.py
+
+## Dependencies
+This script runs on Tkinter, which comes pre-installed with Python. No extra dependencies required!
+
 ## Future Improvements
 Smooth Reanimation using after()
 
