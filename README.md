@@ -4,8 +4,11 @@ This project simulates PLC-style ladder logic for a crane operation using Tkinte
 
 ## Features
 ✅ Ladder Logic Visualization – Rungs light up when active
+
 ✅ Smooth Crane Animation – Moves left/down to pick an object, then up to return
+
 ✅ Emergency Stop & Latching Circuit – Stops operations and resumes when started again
+
 ✅ Stacked Layout – Ladder logic above, crane animation middle, buttons below
 
 ## Future Improvements
