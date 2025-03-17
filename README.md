@@ -13,4 +13,5 @@ This project simulates PLC-style ladder logic for a crane operation using Tkinte
 
 ## Future Improvements
 Smooth Reanimation using after()
+
 More Crane Movements (e.g., sideways motion)
