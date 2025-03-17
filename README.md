@@ -29,7 +29,7 @@ Make sure you have Python installed, then run:
 python crane_simulator.py
 
 ## Dependencies
-This script runs on Tkinter, which comes pre-installed with Python. No extra dependencies required!
+This script runs on Tkinter, which comes pre-installed with Python.
 
 ## Future Improvements
 Smooth Reanimation using after()
